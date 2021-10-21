@@ -1,0 +1,213 @@
+/* font */
+
+@font-face {
+  font-family: "Seven Segment";
+  src: url('../font/7 Segment.ttf');
+  }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* menu and navbar */
+.menu {
+  overflow: hidden;
+  height: 30px;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.menu a {
+  padding: 5px 16px;
+  font-size: 20px;
+  cursor:pointer;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+.menu a:hover {
+  background: #ddd;
+  color: #111;
+}
+.navbar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.navbar a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #ffffff;
+  display: block;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.navbar a:hover {
+  color: #f1f1f1;
+}
+
+.navbar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 10%;
+  font-size: 36px;
+  margin-left: 10%;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 0px;
+}
+
+@media screen and (max-height: 450px) {
+  .navbar {padding-top: 15px;}
+  .navbar a {font-size: 18px;}
+}
+
+/* form */
+
+input[type=text], select {
+  width: 150px;
+  height: 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=text]:focus {
+  width: 60%;
+}
+
+.container {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stopwatch {
+  height: 500px;
+  text-align: center;
+}
+
+.countdown {
+  padding: 0px 20px;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 50% 40%;
+  grid-column-gap: 5%;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  margin-bottom: 14px;
+}
+
+.timer {
+  font-size: 5vw;
+  font-family: "Seven Segment";
+  margin-bottom: 16px;
+  font-weight: normal;
+}
+
+.action {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.btn {
+  border: none;
+  padding: 8px 0;
+  height: 40px;
+  width: 100px;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin: 8px;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  transition: .2s;
+}
+
+.btn:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.btn:active {
+  transform: unset;
+}
+
+.start {
+  background-color: #155bdd;
+}
+
+.stop {
+  background-color: #c71414;
+}
+
+.add {
+  background-color:#4CAF50;
+  width: 200px;
+}
+
+.reset {
+  background-color:grey;
+  width: 200px;
+}
+
+.save{
+  color: black;
+  background-color: yellow;
+ 
+}
+
+.split {
+  display: none;
+}
+
+.split-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 500px;
+  overflow: auto;
+}
+
+.split-list {
+  display: flex;
+  min-width: 350px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  margin-bottom: 4px;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.result {
+  display: none;
+  margin-bottom: 16px;
+}
+
